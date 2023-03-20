@@ -26,6 +26,7 @@ html{
     font-size: 45px;
     font-weight: 450;
     padding: 10px 80px;
+    cursor: pointer;
 }
 .title>span{
     color:rgba(146, 179, 229, 1);
@@ -35,6 +36,7 @@ html{
     height: 80px;
     position: absolute;
     left: 85%;
+    cursor: pointer;
 }
 .infor>h6{
     position: absolute;
