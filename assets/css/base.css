@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#header{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.vertical_line{
+    position: absolute;
+    left: 254px;
+    top: 15px;
+    height: 50px;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.title{
+    position: absolute;
+    color: rgba(61, 128, 229, 1);
+    font-size: 45px;
+    font-weight: 450;
+    padding: 10px 80px;
+}
+.title>span{
+    color:rgba(146, 179, 229, 1);
+}
+.infor{
+    width: 230px;
+    height: 80px;
+    position: absolute;
+    left: 85%;
+}
+.infor>h6{
+    position: absolute;
+    left: 50px;
+    width: 100px;
+    line-height: 80px;
+    font-weight: 400;
+    font-size: 12px;
+}
+.infor>img{
+    position: absolute;
+    border-radius: 200px;
+    width: 40px;
+    top: 20px;
+}
+#navbar{
+    position: absolute;
+    background: rgba(61, 128, 229, 1);
+    width: 254px;
+    height: 633px;
+    color: white;
+
+}
+#navbar>ul{
+    margin-top: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#navbar ul li{
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+}
+#navbar .icon_nav{
+    margin-right: 5px;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+}
+#navbar .title_nav{
+    position: absolute;
+    left: 90px;
+    font-weight: 400;
+}
+.layout{
+    width: 0px;
+    height: 60px;
+    background: rgba(217, 217, 217, 0.4);
+    position: absolute;
+    right: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+#navbar>ul>li:hover .layout{
+    display: inline;
+    transition: 0.3s;
+    width: 100%;
+}
+.line{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 5px;
+    height: 0px;
+    border-radius: 20px;
+}
+#navbar>ul>li:hover .line{
+    height: 60px;
+    transition: 0.3s;
+}
+#navbar>ul>.line_function:hover{
+    height: 240px;
+    transition: 0.3s;
+}
+
+#navbar>ul>.line_function>.layout{
+    height: 240px;
+}
+#navbar>ul>.line_function:hover.layout{
+    transition: 0.05s;
+}
+.subnav{
+    position: absolute;
+    top: 60px;
+    display: none;
+    width: 214px;
+    left: 40px;
+    overflow: hidden;
+}
+
+#navbar>ul>.line_function:hover .subnav{
+    display: inline;
+    transition: 0.3s;
+}
+.layout1{
+    width: 0px;
+    height: 60px;
+    background: rgba(217, 217, 217, 0.4);
+    position: absolute;
+    right: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+#navbar .subnav>li:hover .layout1{
+    display: inline;
+    transition: 0.3s;
+    width: 100%;
+}
+.line1{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    right: 0;
+}
+.line2{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    right: 0;
+    top:60px
+}
+#navbar .subnav>li:hover .line1{
+    width: 214px;
+    transition: 0.3s;
+}
+#navbar .subnav>li:hover .line2{
+    width: 214px;
+    transition: 0.3s;
+}
+#navbar>ul>.line_2function>.layout{
+    height: 180px;
+}
+#navbar>ul>.line_2function:hover{
+    height: 180px;
+    transition: 0.3s;
+}
