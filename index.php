@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/chucvu/chucvu.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+    <link rel="stylesheet" href="./assets/css/groups.css">
 </head>
 
 <body>
     <?php
-    include("/xampp/htdocs/laptopSeller/View/admin/adminView.php")
+    include("/xampp/htdocs/laptopSeller/View/admin/adminView.php");
+    include("/xampp/htdocs/laptopSeller/View/admin/groups.php")
 ?>
 </body>
 
