@@ -1,12 +1,16 @@
 <div id="header">
-        <h1 class="title">Ti<span>tle</span></h1>
-        <div class="vertical_line"></div>
-        <div class="infor">
-            <h6>Võ Trần Gia Bảo</h6>
-            <img src="./assets/img/meme7.jpg" alt="">
-            
-        </div>
+    <h1 class="title">Ti<span>tle</span></h1>
+    <div class="vertical_line"></div>
+    <div class="infor">
+        <h6>Võ Trần Gia Bảo</h6>
+        <img src="./assets/img/meme7.jpg" alt="">
+
     </div>
+</div>
+
+
+
+<div style="display:flex;">
     <div id="navbar">
         <ul>
             <li class="line_function">
@@ -67,7 +71,7 @@
                     </li>
                 </ul>
             </li>
-            <li >
+            <li>
                 <div class="line"></div>
                 <div class="layout"></div>
                 <img class="icon_nav" src="./assets/icon/customer.png" alt="">
@@ -84,7 +88,7 @@
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/job.png" alt="">
-                        <h4 class="title_nav">Chức vụ</h4>
+                        <a href="./index.php?chon=qlnv&id=chucvu" class="title_nav">Chức vụ</a>
                     </li>
                     <li>
                         <div class="line1"></div>
@@ -130,4 +134,31 @@
                 <h4 class="title_nav">Nhà vận chuyển</h4>
             </li>
         </ul>
+
+
+
     </div>
+    <div style="flex:3; background-color:lightblue;">
+        <?php
+        if (isset($_GET['chon'])){
+            if ($_GET['chon'] =='qlnv'){
+                if (isset($_GET['id'])){
+                    if ($_GET['id'] == 'chucvu'){
+                        include("./View/admin/chucVu.php");
+
+
+                    }
+                }
+            }
+        }
+        ?>
+    </div>
+</div>
+
+
+
+
+
+<!-- <div style="flex:4;background-color: lighblue;border: 2px solid red;" class="right-content">
+
+    </div> -->
