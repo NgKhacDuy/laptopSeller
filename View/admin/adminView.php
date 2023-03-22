@@ -138,14 +138,14 @@
 
 
     </div>
-    <div style="flex:3; background-color:lightblue;">
+    <div style="flex:4; background-color:lightblue;">
         <?php
         if (isset($_GET['chon'])){
             if ($_GET['chon'] =='qlnv'){
                 if (isset($_GET['id'])){
                     if ($_GET['id'] == 'chucvu'){
-                        include("./View/admin/chucVu.php");
-
+                        // include("./View/admin/chucVu.php");
+                        include("./View/admin/groups.php");
 
                     }
                 }

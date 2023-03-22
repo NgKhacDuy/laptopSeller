@@ -1,7 +1,7 @@
 <div class="content">
     <h3 class="title">Dashboard</h3>
     <!-- <h4>Khuyến mãi</h4> -->
-    <button class="btn">Thêm</button>
+    <!-- <button class="btn">Thêm</button> -->
     <!-- <div class="search">
         <input type="text" class="search__input" placeholder="Type your text">
         <button class="search__button">
@@ -12,7 +12,7 @@
             </svg>
         </button>
     </div> -->
-     <!-- <h5>3 khuyến mãi</h5> -->
+    <!-- <h5>3 khuyến mãi</h5> -->
     <main class="table">
         <section class="table__header">
             <h1>List Discount</h1>
@@ -22,8 +22,8 @@
             </div>
             <div class="export__file">
                 <label for="export-file" class="export__file-btn" title="Export File"></label>
-                <input type="checkbox" id="export-file" >
-                
+                <input type="checkbox" id="export-file">
+
                 <div class="export__file-options">
                     <label>Export As &nbsp; &#10140;</label>
                     <label for="export-file" id="toPDF">PDF <img src="./assets/icon/pdf.png" alt=""></label>
@@ -140,5 +140,16 @@
             </table>
         </section>
     </main>
+
+    <!-- dưới này để quản lí các nút trong mục chức vụ -->
+    <!-- sau này sẽ đổi tên để tránh trung lập -->
+    <div class="button-container">
+
+        <button class="btn-insert">Thêm</button>
+        <button class="btn-insert">Xóa</button>
+        <button class="btn-insert">Sửa</button>
+    </div>
+
+
 </div>
 <script src="./assets/js/script.js"></script>

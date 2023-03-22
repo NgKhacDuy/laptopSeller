@@ -1,9 +1,12 @@
 .content{
     position: relative;
     background: rgb(220, 215, 215);
-    width: 100%;
-    left: 254px;
-    height:633px;
+    /* width: 100%; */
+    /* left: 254px;   sửa lại nha */   
+
+    /* height:633px; */
+    display:flex;
+    flex-direction: column;
 }
 body{
     overflow-x: hidden;
@@ -21,10 +24,21 @@ body{
     font-size: 20px;
     font-weight: 400;
 }
-.content>button {
-    position: absolute;
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* sửa lại nut thêm */
+.content button
+
+{
+    /* position: absolute;
     right: 350px;
-    top: 570px;
+    top: 570px; */
+
+    max-width: 200px;
     padding: 0px 40px;
     font-size: 12px;
     text-transform: uppercase;
@@ -42,14 +56,16 @@ body{
 
   }
   
-.content>button:hover {
+.content button:hover
+{
     background-color: #304FF5;
     box-shadow: 0px 15px 20px rgba(48, 79, 245, 0.4);
     color: #fff;
     transform: translateY(-7px);
   }
   
-.content>button:active {
+.content button:active
+{
     transform: translateY(-1px);
   }
 
@@ -121,8 +137,8 @@ body{
 
   /* TABLE */
   main.table {
-    width: 75vw;
-    height: 70vh;
+    /* width: 75vw;
+    height: 70vh; */
     background-color: #fff5;
 
     backdrop-filter: blur(7px);
@@ -131,9 +147,11 @@ body{
 
     overflow: hidden;
 
-    position: absolute;
+    flex:1;
+    margin: 16px;
+    /* position: absolute;
     top: 20px;
-    left: 70px;
+    left: 70px; */
 }
 
 .table__header {
