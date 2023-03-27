@@ -88,14 +88,17 @@
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/job.png" alt="">
-                        <a href="./index.php?chon=qlnv&id=chucvu" class="title_nav">Chức vụ</a>
+                        <a style="text-decoration: none; color: white;" href="./index.php?chon=qlnv&id=chucvu"
+                            class="title_nav">Chức
+                            vụ</a>
                     </li>
                     <li>
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/staff.png" alt="">
-                        <h4 class="title_nav">Nhân viên</h4>
+                        <a style="text-decoration: none; color: white;" class="title_nav"
+                            href="./index.php?chon=qlnv&id=nhanvien">Nhân viên</a>
                     </li>
                 </ul>
             </li>
@@ -143,11 +146,20 @@
         if (isset($_GET['chon'])){
             if ($_GET['chon'] =='qlnv'){
                 if (isset($_GET['id'])){
-                    if ($_GET['id'] == 'chucvu'){
-                        // include("./View/admin/chucVu.php");
-                        include("./View/admin/groups.php");
 
+                    switch($_GET['id']){
+
+                        case 'chucvu':
+                            include("./View/admin/groups.php");
+                            break;
+
+                       
                     }
+
+
+                    
+                   
+                    
                 }
             }
         }

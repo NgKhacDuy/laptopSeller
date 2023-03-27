@@ -15,7 +15,25 @@
     <!-- <h5>3 khuyến mãi</h5> -->
     <main class="table">
         <section class="table__header">
-            <h1>List Discount</h1>
+            <h1>
+                <?php
+                        if (isset($_GET['chon'])){
+                            if ($_GET['chon'] =='qlnv'){
+                                if (isset($_GET['id'])){
+
+                                    switch($_GET['id']){
+
+                                        case 'chucvu':
+                                            echo 'Quản Lí Chức Vụ';
+                                            break;
+                                        
+                                    }
+                                    
+                                }
+                            }
+                        }
+                ?>
+            </h1>
             <div class="input-group">
                 <input type="search" placeholder="Search Data...">
                 <img src="./assets/icon/search.png" alt="">
