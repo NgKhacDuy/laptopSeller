@@ -150,7 +150,7 @@
                     switch($_GET['id']){
 
                         case 'chucvu':
-                            include("./View/admin/groups.php");
+                            include("./View/admin/chucVu.php");
                             break;
 
                        
