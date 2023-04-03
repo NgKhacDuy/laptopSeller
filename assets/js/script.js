@@ -200,3 +200,25 @@ const downloadFile = function (data, fileType, fileName = '') {
     a.click();
     a.remove();
 }
+const btn_Add = document.getElementById("btn_Add_Sale");
+const btn_Cancel = document.getElementById("btn_Cancel");
+const btn_Save = document.getElementById("btn_Save");
+
+const modal_Sale = document.getElementById("modal_Sale");
+
+const modal_container = document.getElementById("modal-container");
+btn_Add.addEventListener("click", () => {
+  // Add class .show
+  modal_container.classList.add("show");
+});
+
+btn_Cancel.addEventListener("click", () => {
+  // Add class .show
+  modal_container.classList.remove("show");
+});
+modal_container.addEventListener("click", (e) => {
+  // Add class .show
+  if (!modal_Sale.contains(e.target)) {
+    btn_Cancel.click();
+  }
+});
