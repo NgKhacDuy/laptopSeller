@@ -18,10 +18,11 @@
     <?php
 
     include("/xampp/htdocs/laptopSeller/View/admin/adminView.php");
-    // include("/xampp/htdocs/laptopSeller/View/admin/groups.php.php");
+    // include("/xampp/htdocs/laptopSeller/View/admin/groups.php");
     // include("/xampp/htdocs/laptopSeller/View/admin/adminView.php");
     // include("/xampp/htdocs/laptopSeller/View/admin/groups.php")
 ?>
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>

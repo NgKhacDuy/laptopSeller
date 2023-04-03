@@ -363,7 +363,7 @@ thead th.active,tbody td.active {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background: #fff6 url(images/export.png) center / 80% no-repeat;
+  background: #fff6 url(../icon/export.png) center / 80% no-repeat;
   border-radius: 50%;
   transition: .2s ease-in-out;
 }
@@ -429,4 +429,183 @@ thead th.active,tbody td.active {
 .export__file .export__file-options img{
   width: 2rem;
   height: auto;
+}
+
+
+
+#modal-container{
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition:  all 0.3s ease-in-out;
+}
+#modal-container.show{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -300px;
+  width: 916px;
+  height: 507px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  transition:  all 0.3s ease-in-out;
+}
+
+#modal-container.show .modal{
+  top: 15%;
+}
+
+.modal-header{
+  position: relative;
+  height: 54px;
+  width: 100%;
+  background: #5DB1E0;
+  border-radius: 10px 10px 0 0;
+}
+.modal-header> h3{
+  position: absolute;
+  line-height: 54px;
+  left: 20px;
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+}
+.modal-body{
+  position: absolute;
+  width: 100%;
+  height: calc(100%-54px);
+  
+}
+.modal-body form{
+  margin: 20px 50px;
+}
+.name_txt{
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+.txt{
+  width: 210px;
+  height: 30px;
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+.modal-body .line_form{
+  width: 750px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 15px auto;
+}
+.txt1{
+  width: 115px;
+}
+.cbb{
+  width: 190px;
+}
+.cb{
+  height: 16px;
+  width: 16px;
+}
+.txt2{
+  width: 157px;
+}
+.modal-body .btn{
+  position: absolute;
+  right: 30px;
+  top: 370px;
+}
+#btn_Save{
+  right: 250px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#btn_Save:hover {
+  background-color: #EE5555;
+  box-shadow: 0px 15px 20px rgba(238, 85, 85, 0.4);
+}
+#btn_Cancel{
+  right: 100px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#btn_Cancel:hover {
+  background-color: #D9D9D9;
+  box-shadow: 0px 15px 20px rgba(217, 217, 217, 0.4);
+  color: #0b0b0b;
+}
+
+.content h4{
+  position: relative;
+}
+.content .note{
+  position: relative;
+  padding: 20px 30px 0 30px;
+  font-size: 14px;
+}
+.content>form{
+  padding: 20px 30px;
+  position: relative;
+}
+.content>form>.note{
+  padding: 0 0 10px 170px;
+  font-size: 12px;
+}
+.content>form>.txt{
+  margin: 10px 0px;
+  width: 270px;
+}
+.content>form>.line_form{
+  width: 76%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 15px 50px;
+}
+.btn_group{
+  width: 76%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 15px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  position: absolute;
+}
+.btn_group>button{
+  top: 20px;
+}
+
+.btn_group>button:nth-child(1){
+  right:570px;
+}
+.btn_group>button:nth-child(2){
+  right: 200px;
+}
+.btn_group>button:nth-child(3){
+  right: 40px;
+}
+form:first-child{
+  background: blue;
+  color: blue;
+}
+.bb{
+  width: 76%;
+  height: 40px;
+  background: #3D80E5;
+  margin: 15px 50px;
+}
+.bb>p{
+  color: white;
+  line-height: 40px;
+  margin-left: 10px;
 }

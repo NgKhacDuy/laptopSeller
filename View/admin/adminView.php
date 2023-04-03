@@ -24,21 +24,24 @@
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/Swap.png" alt="">
-                        <h4 class="title_nav">Phân quyền</h4>
+                        <a style="text-decoration: none; color: white;" href="./index.php?chon=dashboard&id=groups"
+                            class="title_nav">Phân quyền</a>
                     </li>
                     <li>
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/acc.png" alt="">
-                        <h4 class="title_nav">Tài khoản</h4>
+                        <a style="text-decoration: none; color: white;" href="./index.php?chon=dashboard&id=account"
+                            class="title_nav">Tài khoản</a>
                     </li>
                     <li>
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/discount.png" alt="">
-                        <h4 class="title_nav">Sale</h4>
+                        <a style="text-decoration: none; color: white;" href="./index.php?chon=dashboard&id=discount"
+                            class="title_nav">Sale</a>
                     </li>
                 </ul>
             </li>
@@ -171,6 +174,24 @@
                             
                     }
                 }
+            }
+            else if($_GET['chon'] =='dashboard'){
+                    if (isset($_GET['id'])){
+    
+                        switch($_GET['id']){
+    
+                            case 'groups':
+                                include("./View/admin/groups.php");
+                                break;
+                            case 'account':
+                                include("./View/admin/account.php");
+                                break;
+                            case 'discount':
+                                include("./View/admin/discount.php");
+                                break;
+                           
+                        }  
+                    }
             }
         }
         ?>
