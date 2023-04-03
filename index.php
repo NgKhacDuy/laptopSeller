@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/admin.css">
     <link rel="stylesheet" href="./assets/css/groups.css">
     <link rel="stylesheet" href="./assets/css/chucvu/chucvu.css">
+    <link rel="stylesheet" href="./assets/css/sanpham/sanpham.css">
 
 </head>
 

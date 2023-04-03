@@ -53,14 +53,16 @@
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/classify_product.png" alt="">
-                        <h4 class="title_nav">Loại sản phẩm</h4>
+                        <a style="text-decoration: none; color: white;" href="./index.php?chon=qlsp&id=loaisp"
+                            class="title_nav">Loại sản phẩm</a>
                     </li>
                     <li>
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="layout1"></div>
                         <img class="icon_nav" src="./assets/icon/product.png" alt="">
-                        <h4 class="title_nav">Sản phẩm</h4>
+                        <a style="text-decoration: none; color: white;" href="./index.php?chon=qlsp&id=sanpham"
+                            class="title_nav">Sản phẩm</a>
                     </li>
                     <li>
                         <div class="line1"></div>
@@ -152,14 +154,22 @@
                         case 'chucvu':
                             include("./View/admin/chucVu.php");
                             break;
-
+                        
                        
                     }
-
-
-                    
-                   
-                    
+                }
+            }
+            elseif ($_GET['chon'] == 'qlsp'){
+                if (isset($_GET['id'])){
+                    switch($_GET['id']){
+                        case 'sanpham':
+                            include("./View/admin/sanpham.php");
+                            break;
+                        case 'loaisp':
+                            include("./View/admin/loaisp.php");
+                            break;
+                            
+                    }
                 }
             }
         }

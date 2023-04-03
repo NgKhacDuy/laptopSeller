@@ -23,7 +23,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
+let id_array = []; 
 function checked(){
     var table = document.querySelector(".table_content-sanpham");
     var tr = table.querySelectorAll("tr");
@@ -41,11 +41,13 @@ function checked(){
             if(checkboxList[j].checked){
                 let str = checkboxList[j].id;
                 // console.log(checkboxList[j].id);
-                console.log(str[3])
+                id_array.push(str[3]);
+                
             }
         }
     }
+    return id_array
 }
 
 
-checked()
+
