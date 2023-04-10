@@ -1,6 +1,6 @@
 const search = document.querySelector('.input-group input'),
     table_rows = document.querySelectorAll('tbody tr'),
-    table_headings = document.querySelectorAll('thead th');
+    table_headings = document.querySelectorAll('thead th:not(:first-child)');
 
 // 1. Searching for specific data of HTML table
 search.addEventListener('input', searchTable);

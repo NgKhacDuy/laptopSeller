@@ -1,7 +1,7 @@
 <div class="content">
     <h3 class="title">Dashboard</h3>
 
-    <button class="btn" id="btn_Add">Thêm</button>
+    <button class="btn" id="btn_Add_Sale">Thêm</button>
 
     <!-- Table -->
     <main class="table">
@@ -13,8 +13,8 @@
             </div>
             <div class="export__file">
                 <label for="export-file" class="export__file-btn" title="Export File"></label>
-                <input type="checkbox" id="export-file" >
-                
+                <input type="checkbox" id="export-file">
+
                 <div class="export__file-options">
                     <label>Export As &nbsp; &#10140;</label>
                     <label for="export-file" id="toPDF">PDF <img src="./assets/icon/pdf.png" alt=""></label>
@@ -44,7 +44,7 @@
                         <td>
                             <img src="./assets/icon/cross.png">
                         </td>
-                        
+
                     </tr>
                     <tr class="sort_row">
                         <td><input type="checkbox" id="cb_Remove" class="cb"></td>
@@ -79,7 +79,7 @@
     </main>
 
     <!-- Modal -->
-    <!-- <div id="modal-container">
+    <div id="modal-container">
         <div id="modal_Sale" class="modal">
             <div class="modal-header">
                 <h3>Thêm khuyến mãi mới</h3>
@@ -113,16 +113,16 @@
                     <input type="date" name="txt_TimeFrom" class="txt txt2">
                     <label for="txt_TimeTo" class="name_txt">Đến</label>
                     <input type="date" name="txt_TimeTo" class="txt txt2">
-                    
-                    <input type="submit" name="btn_Save" value="Lưu" class="btn" id="btn_Save"/>
-                    <input type="submit" name="btn_Cancel" value="Hủy" class="btn" id="btn_Cancel"/>
+
+                    <input type="submit" name="btn_Save" value="Lưu" class="btn" id="btn_Save" />
+                    <input type="submit" name="btn_Cancel" value="Hủy" class="btn" id="btn_Cancel" />
                 </form>
             </div>
             <div class="modal-footer">
 
             </div>
         </div>
-    </div> -->
-    
+    </div>
+
     <!-- End Modal -->
 </div>

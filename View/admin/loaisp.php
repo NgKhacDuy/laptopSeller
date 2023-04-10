@@ -62,14 +62,14 @@
                 </thead>
                 <tbody class="table_content-sanpham">
                     <?php
-                        require_once('./Controller/admin/adminController.php');
+                        require_once('./Controller/admin/SanPhamController.php');
                         $adminModel = new adminController();
                         $loaiSanphamResult = $adminModel->getAllLoaiSanPhamController();
                         for($i =0; $i< count($loaiSanphamResult); $i++){
                             echo "<tr>";
                                 echo"<td>";
-                                    echo"<input checked='' type='checkbox' id='cbx' class='hidden-xs-up'>";
-                                    echo'<label for="cbx" class="cbx"></label>';
+                                echo"<input checked='' type='checkbox' class='cbx' id='cbx".$loaiSanphamResult[$i]['MaLoaiSP']."' class='hidden-xs-up'>";
+                                echo'<label for="cbx'.$loaiSanphamResult[$i]['MaLoaiSP'].'" class="cbx_label"></label>';
                                 echo"</td>";
                                 echo"<td>" .$loaiSanphamResult[$i]['MaLoaiSP']. "</td>";
                                 echo"<td>" .$loaiSanphamResult[$i]['TenLoaiSP']. "</td>";
@@ -87,9 +87,10 @@
 
         <button class="btn-insert">Thêm</button>
         <button class="btn-insert">Xóa</button>
-        <button class="btn-insert">Sửa</button>
+        <button class="btn-insert btn-sua">Sửa</button>
     </div>
 
 
 </div>
 <script src="./assets/js/script.js"></script>
+<script src="../../laptopSeller/assets/js/admin/sanpham/sanpham.js"></script>

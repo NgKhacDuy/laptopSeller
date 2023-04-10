@@ -264,6 +264,7 @@ tbody tr {
 tbody tr.hide {
   opacity: 0;
   transform: translateX(100%);
+  display: none;
 }
 
 tbody tr:hover {

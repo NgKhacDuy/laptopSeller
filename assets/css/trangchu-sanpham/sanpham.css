@@ -1,0 +1,48 @@
+.sanpham-product_content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px;
+}
+
+.card-product-content{
+    position: relative;
+    width: 230px;
+    height: 370px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.2);    
+}
+
+.card-product-img{
+    max-width: 100%;
+    height: 80%;
+    border-radius: 5px;
+}
+.card-product-title{
+    margin-left: 8px;
+}
+.card-product-price-info{
+    display: flex;
+    flex-direction: column;
+}
+.card-product-price-info *{
+    margin: 6px 0 0 8px;
+}
+.card-product-price-icon-sale{
+    background: url("../../img/icon-saleoff.webp");
+    position: absolute;
+    top: 84%;
+    left: 72%;
+    width: 48px;
+    height: 51px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 14px;
+}
+.card-product-price-saleoff{
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}

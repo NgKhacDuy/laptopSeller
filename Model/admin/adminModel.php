@@ -14,29 +14,35 @@
 
         
     }
-    function deleteSanPham($array){
-        global $conn;
+    function deleteSanPham(array $array){
+        try {
+            global $conn;
         // $sql = "Delete from sanpham where sanpham.MaSP in ";
-        $str="";
-        foreach($array as $value){
-            if(count($array)==1){
-                $str.=$value;
+            $str="";
+            foreach($array as $value){
+                if(count($array)==1){
+                    $str.=$value;
+                }
+                else{
+                    $str.=$value.",";
+                }
             }
-            else{
-                $str.=$value.",";
+            $str = trim($str,'[]');
+            $str = rtrim($str,',');
+            $str = str_replace('"','',$str);
+            // echo "String: ".$str;
+            $sql = "Delete from sanpham where sanpham.MaSP in (".$str.") ";
+            // var_dump($sql);
+            if ($conn->query($sql) === TRUE) {
+                echo "success";
+                return true;
+            } else {
+                echo "Error deleting record: " . $conn->error;
+                return false;
             }
+        } catch (\Throwable $th) {
+            print_r($th);
         }
-        $sql = "Delete from sanpham where sanpham.MaSP in (".$str.") ";
-        echo $sql;
-        
-        // $result = mysqli_query($conn, $sql);
-        // $data = array();
-        // if (mysqli_num_rows($result) > 0) {
-        //     while ($row = mysqli_fetch_assoc($result)) {
-        //         $data[] = $row;
-        //     }
-        // }
-        // return $data;
     }
     function getAllLoaiSanPham(){
         global $conn;
@@ -50,7 +56,6 @@
         }
         return $data;
     }
-    $array = array("id1");
-    deleteSanPham($array);
+
     
 ?>
