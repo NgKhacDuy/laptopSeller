@@ -7,9 +7,6 @@
 
     </div>
 </div>
-
-
-
 <div style="display:flex;">
     <div id="navbar">
         <ul>
@@ -197,8 +194,9 @@
         ?>
     </div>
 </div>
+<script>
 
-
+</script>
 
 
 

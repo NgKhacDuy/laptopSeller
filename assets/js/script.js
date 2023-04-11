@@ -222,3 +222,9 @@ modal_container.addEventListener("click", (e) => {
     btn_Cancel.click();
   }
 });
+function removeLoader(){
+    setTimeout(() => {
+        let loader = document.getElementById('loading-animation');
+        loader.style='display:none';
+    }, 1000);
+}
