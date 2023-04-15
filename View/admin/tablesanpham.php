@@ -10,12 +10,12 @@
         echo"</td>";
         echo "<td>" .$sanphamResult[$i]['MaSP']. "</td>";
         if (isset($sanphamResult[$i]['HinhAnh']) && !empty($sanphamResult[$i]['HinhAnh'])) {
-            echo '<td> <img class="sanpham_img" src="data:image/png;base64,'.base64_encode($sanphamResult[$i]['HinhAnh']).'" alt="">'.$sanphamResult[$i]["TenSP"].'</td>';
+            echo '<td> <img class="sanpham_img" src="/laptopSeller/assets/img/'.$sanphamResult[$i]['HinhAnh'].'" alt="">'.$sanphamResult[$i]["TenSP"].'</td>';
         } else {
             echo '<td> <img class="sanpham_img" src="/laptopSeller/assets/img/no-img.png" alt="">'.$sanphamResult[$i]["TenSP"].'</td>';
         }
         echo "<td>".$sanphamResult[$i]['ThuongHieu']."</td>";
-        echo "<td>".$sanphamResult[$i]['Gia']."</td>";
+        echo "<td>".number_format($sanphamResult[$i]['Gia'], 0, ',', '.')."đ</td>";
         echo "<td>";
         echo "<p class='status delivered'>".$sanphamResult[$i]['SoLuong']."</p>";
         echo "</td>";

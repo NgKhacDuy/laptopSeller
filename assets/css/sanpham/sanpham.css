@@ -161,6 +161,7 @@
   .modal-sanpham_input{
     display: flex;
     flex-direction: column;
+    width: 30%;
   }
   .label-input-admin-sanpham{
     margin-top: 12px;
@@ -170,7 +171,7 @@
     margin-left: 36px;
     margin-top: 12px;
   }
-  .modal-sanpham_input input[type="text"]{
+  .modal-sanpham_input input[type="text"],input[type="number"]{
     height: 24px;
     border-radius: 5px;
     /* max-width: 300px; */
@@ -253,5 +254,10 @@
   .modal-sanpham_img-btn .modal-sanpham-group-btn .btn-admin-sanpham-huy:hover{
     color: black ;
     background-color: red;
+  }
+
+  .error-modal{
+    display: none;
+    color: red;
   }
   

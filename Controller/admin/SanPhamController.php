@@ -17,14 +17,23 @@
                 print_r("error deleting");
             }
         }
+        function getLastIDSanPhamAndPLus1Controller(){
+            return intval(getLastIDSanPham())+1;
+        }
     }
     if(isset($_POST['idToDelete'])){
         $id = array($_POST['idToDelete']);
         // echo "id go here".$id;
         deleteSanPham($id);
     }
-    else{
-        echo 'lioi ';
+    
+
+    if(isset($_POST['dataInsert'])){
+        $data =json_decode($_POST['dataInsert']);
+        // echo "id go here".$id;
+        insertSanPham($data);
+        error_log($data);
     }
+    
         
 ?>

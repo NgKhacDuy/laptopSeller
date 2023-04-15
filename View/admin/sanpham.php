@@ -1,3 +1,7 @@
+<?php
+    include $_SERVER['DOCUMENT_ROOT'] . '/laptopSeller/Controller/admin/SanPhamController.php';
+    $adminModel = new adminController();
+?>
 <div class="content">
     <h3 class="title">Dashboard</h3>
     <main class="table">
@@ -68,35 +72,38 @@
         <div class="modal-content-admin_sanpham">
             <div class="modal-content-admin_sanpham-header">
                 <span class="modal-admin_sanpham-close">&times;</span>
-                <h3 class="modal-admin_sanpham-title">Sửa sản phẩm</h3>
+                <h3 class="modal-admin_sanpham-title"></h3>
             </div>
             <div class="modal-content-admin_sanpham-body">
                 <div class="modal-sanpham_input">
                     <label class="label-input-admin-sanpham" for="input-admin_sanpham-masp">Mã sản phẩm</label>
-                    <input type="text" id="input-admin_sanpham-masp">
+                    <input type="text" id="input-admin_sanpham-masp" disabled="disabled">
                     <label class="label-input-admin-sanpham" for="input-admin_sanpham-tensp">Tên sản phẩm</label>
                     <input type="text" id="input-admin_sanpham-tensp">
-                    <div class="admin-sanpham-input-price">
-                        <div class="admin-sanpham-input-price-in">
-                            <label class="label-input-admin-sanpham" for="input-admin_sanpham-gianhap">Giá nhập</label>
-                            <input type="text" id="input-admin_sanpham-gianhap">
-                        </div>
+                    <!-- <div class="admin-sanpham-input-price">
                         <div class="admin-sanpham-input-price-out">
-                            <label class="label-input-admin-sanpham" for="input-admin_sanpham-giaban">Giá bán</label>
-                            <input type="text" id="input-admin_sanpham-giaban">
+                            
                         </div>
-                    </div>
+                    </div> -->
+                    <label class="label-input-admin-sanpham" for="input-admin_sanpham-giaban">Giá bán</label>
+                    <input type="text" id="input-admin_sanpham-giaban">
                     <label class="label-input-admin-sanpham" for="input-admin_sanpham-loaisp">Loại sản phẩm</label>
                     <select name="input-admin_sanpham-loaisp" id="input-admin_sanpham-loaisp">
                         <?php
-                        include_once('./Controller/admin/SanPhamController.php');
-                        $adminModel = new adminController();
+                        // include_once('./Controller/admin/SanPhamController.php');
+                        // $adminModel = new adminController();
                         $loaiSanphamResult = $adminModel->getAllLoaiSanPhamController();
                         foreach ($loaiSanphamResult as $loaiSanpham) {
                             echo "<option value='" . $loaiSanpham['TenLoaiSP'] . "'>" . $loaiSanpham['TenLoaiSP'] . "</option>";
                         }
                     ?>
                     </select>
+                    <label class="label-input-admin-sanpham" for="input-admin_sanpham-thuonghieu">Thương hiệu</label>
+                    <input type="text" id="input-admin_sanpham-thuonghieu">
+                    <label class="label-input-admin-sanpham" for="input-admin_sanpham-soluong">Số lượng:</label>
+                    <input id="input-admin_sanpham-soluong" type="number" name="input-admin_sanpham-soluong" min="0"
+                        step="1" required>
+
 
                 </div>
                 <div class="vertical-line">
@@ -109,9 +116,10 @@
                     <div id="image-preview-admin-sanpham"></div>
                     <input type="file" id="image-input-admin-sanpham" accept="image/*">
                     <div class="modal-sanpham-group-btn">
-                        <button class="modal-sanpham-btn">Lưu</button>
+                        <button class="modal-sanpham-btn btn-admin-sanpham-luu">Lưu</button>
                         <button class="modal-sanpham-btn btn-admin-sanpham-huy">Hủy</button>
                     </div>
+                    <p class="error-modal">Lỗi</p>
                 </div>
             </div>
         </div>
