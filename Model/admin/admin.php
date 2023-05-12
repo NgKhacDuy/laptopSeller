@@ -59,7 +59,7 @@
 			$password2 = mysqli_real_escape_string($this->db->link, md5($data['confirmpassword']));
 			$level = mysqli_real_escape_string($this->db->link, $data['level']);
 
-			if($name == "" || $username == "" ||  $password2 == ""|| $password == "" || $email == ""){
+			if($name == "" || $username == "" ||  $password2 == ""|| $password == "" ){
 				$alert = "<span>Vui lòng không để trống thông tin</span>"; 
 				return $alert;
 			}else{

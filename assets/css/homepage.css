@@ -16,6 +16,7 @@ main {
 
 .nav_the-loai {
     display: flex;
+    align-items: center !important;
     justify-content: space-evenly;
     margin: 35px 10px 10px 10px;
 

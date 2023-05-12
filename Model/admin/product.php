@@ -484,7 +484,17 @@
 			return $result;
 		}
 		
-		
+		public function get3ImgByIDPro($id){
+			$query = "SELECT * FROM hinhanh WHERE id_SanPham='$id' LIMIT 3";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+		public function getImgByIDPro($id){
+			$query = "SELECT * FROM hinhanh WHERE id_SanPham='$id'";
+			$result = $this->db->select($query);
+			return $result;
+		}
 	
 
 	}

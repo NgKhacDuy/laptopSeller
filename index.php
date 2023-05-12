@@ -38,6 +38,7 @@
                 $prod = $product->getproductByid($result['MaSP']);
                 if($prod){
                   while($resultPro = $prod->fetch_assoc()){
+                    $listImg = $product->get3ImgByIDPro($resultPro['MaSP']);
             ?>
             <div class="carousel-item">
               <div class="container">
@@ -50,21 +51,19 @@
                         alt="ảnh chính "
                       />
                       <div class="small-pic">
+                      <?php
+                    if($listImg){
+                      while($img=$listImg->fetch_assoc()){
+                    ?>
                         <div class="active_hover"><img
                           class=" subimg"
                           src="View/admin/uploads/<?php echo $resultPro['HinhAnh'] ?>"
                           alt="ảnh phụ"
                         /></div>
-                      <div class="active_hover"><img
-                          class=" subimg"
-                          src="View/admin/uploads/<?php echo $resultPro['HinhAnh'] ?>"
-                          alt="ảnh phụ"
-                        /></div>
-                      <div class="active_hover"><img
-                          class=" subimg"
-                          src="View/admin/uploads/<?php echo $resultPro['HinhAnh'] ?>"
-                          alt="ảnh phụ"
-                        /></div>
+                        <?php
+                      }
+                    }
+                      ?>
                       </div>
                     </div>
                   </div>
@@ -73,25 +72,19 @@
                       <h3><?php echo $resultPro['TenSP'] ?></h3>
                       <h4><?php echo $fm->format_currency($resultPro['Gia']) ?> Đ</h4>
                       <p>
-                        MacBook Air with M1 is an incredibly portable laptop —
-                        it’s nimble and quick, with a silent, fanless design and
-                        a beautiful Retina display. T hanks to its slim profile
-                        and all‑day battery life, this Air moves at the speed of
-                        lightness.
-                      </p>
+                      <?php echo $resultPro['MoTaNgan']?>
+                    </p>
 
                       <button
                         onclick="location.href='sanpham?id=<?php echo $resultPro['MaSP']?>'"
                         style="
-                          width: 400px;
-                          height: 50px;
-                          background-color: rgb(55,82, 120);
-                          color: white;
+                          width: 350px;
+                        height: 50px;
+                        background-color: rgb(55,82, 120);
+                        color: white;
                           
-                          position: absolute;
-                          left: 2%;
-                          top: 260px;
-                          font-size: 14px;
+                        
+                        font-size: 14px;
 
                         "
                         type="button"

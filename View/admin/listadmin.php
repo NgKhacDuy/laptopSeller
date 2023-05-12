@@ -73,8 +73,8 @@ include('includes/navbar.php');
                 
               ?>
                 <select name="level" class="form-control">
-                  <option value= "0">Admin</option>
-                  <option value= "1">Nhân viên</option>
+                  <option value= "admin">Admin</option>
+                  <option value= "nhanvien">Nhân viên</option>
                 </select>
             </div>
         
@@ -158,7 +158,7 @@ include('includes/navbar.php');
             </td>
             <td>
                 <form action="" method="post">
-                  <input type="hidden" name="delete_id" value="<?php echo $result['username']; ?>">
+                  <input type="hidden" name="delete_id" value="<?php echo $result['MaNV']; ?>">
                   <button type="submit" name="delete_btn" class="btn btn-danger"> Xóa Nhân Viên</button>
                 </form>
             </td>

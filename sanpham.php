@@ -13,7 +13,7 @@ ob_start();
 
 ?>
 <link rel="stylesheet" href="assets/css/chitietsanpham.css">
-<section>
+<section style="background-color: #E8E8E8;">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -30,39 +30,35 @@ ob_start();
                             while($result = $showProd->fetch_assoc()){
                     ?>
                     <img
-                      style="width: 100%"
+                      style="width: 70%; padding-top:50px"
                       src="View/admin/uploads/<?php echo $result['HinhAnh'] ?>"
                       alt="ảnh chính "
                     />
                     <div class="small-pic">
+                    <?php
+                      $listImg = $product->getImgByIDPro($id);
+                      if($listImg){
+                        while($img=$listImg->fetch_assoc()){
+                      ?>
+                      <div class="active_hover">
                       <img
-                        class="active_hover"
-                        src="View/admin/uploads/<?php echo $result['HinhAnh'] ?>"
+                        class=""
+                        src="View/admin/uploads/<?php echo $img['Img'] ?>"
                         alt="ảnh phụ"
-                      />
-                      <img
-                        class="active_hover"
-                        src="View/admin/uploads/<?php echo $result['HinhAnh'] ?>"
-                        alt="ảnh phụ"
-                      />
-                      <img
-                        class="active_hover"
-                        src="View/admin/uploads/<?php echo $result['HinhAnh'] ?>"
-                        alt="ảnh phụ"
-                      />
+                      /></div>
+                      <?php
+                      }
+                    }
+                      ?>
                     </div>
                   </div>
                 </div>
                 <div class="col-xs-12" style="padding-top: 50px">
                   <div class="laptop_description">
-                    <h3 style="text-align: center"><?php echo $result['TenSP'] ?></h3>
-                    <h4><?php echo $format->format_currency($result['Gia'] )?> đ</h4>
-                    <p>
-                      MacBook Air with M1 is an incredibly portable laptop —
-                      it’s nimble and quick, with a silent, fanless design and a
-                      beautiful Retina display. Thanks to its slim profile and
-                      all‑day battery life, this Air moves at the speed of
-                      lightness.
+                    <h3 style="text-align: center" class="title"><?php echo $result['TenSP'] ?></h3>
+                    <!-- <h4><?php echo $format->format_currency($result['Gia'] )?> đ</h4> -->
+                    <p style="padding: 0 240px;text-align: center;">
+                    <?php echo $result['MoTaNgan'] ?>
                     </p>
 
                     <div class="color-container">
@@ -70,50 +66,33 @@ ob_start();
                         id="black-color"
                         class="btn btn-info active_hover"
                         style="
-                          height: 50px;
-                          width: 50px;
-                          background-color: black;
+                          height: 25px;
+                          width: 25px;
+                          background-color: #B3B2B4;
                           border-radius: 100%;
                           transition: top 0.2s ease;
+                          border: none;
                         "
                       ></button>
-                      <button
-                        id="gray-color"
-                        class="btn btn-info active_hover"
-                        style="
-                          height: 50px;
-                          width: 50px;
-                          background-color: rgb(176, 176, 176);
-                          border-radius: 100%;
-                          transition: top 0.2s ease;
-                        "
-                      ></button>
-                      <button
-                        id="gold-color"
-                        class="btn btn-info active_hover"
-                        style="
-                          height: 50px;
-                          width: 50px;
-                          background-color: rgb(217, 255, 112);
-                          border-radius: 100%;
-                          transition: top 0.2s ease;
-                        "
-                      ></button>
+                      
                     </div>
 
                     <div style="display: flex; justify-content: center">
-                      <p style="flex: 1; text-align: end; line-height: 40px">
-                      Price: <?php echo $format->format_currency($result['Gia'] )?>Đ
+                      <p style="flex: 1; text-align: end; line-height: 25px;font-size:18px">
+                      Price: <?php echo $format->format_currency($result['Gia'] )?>đ<span style="font-size: 30px;"> |  </span>
                       </p>
                       <div style="flex: 1; padding-left: 10px">
                         <button
                           style="
-                            width: 100%;
-                            background-color: rgb(255, 255, 255);
-                            color: rgb(0, 0, 0);
+                            width: 400px;
+                            background-color: #375278;
+                            color: white;
                             transition: top 0.2s ease;
                             width: 120px;
                             float: left;
+                            font-size: 15px;
+                            border-radius: 30px;
+                            letter-spacing: 0.1em;
                           "
                           type="button"
                           class="btn active_hover"
@@ -144,7 +123,7 @@ ob_start();
           >
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active font_weight400"
                 id="home-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#home"
@@ -158,7 +137,7 @@ ob_start();
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link font_weight400"
                 id="profile-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#profile"
@@ -183,9 +162,10 @@ ob_start();
                   if($showMoTa){
                     while($result = $showMoTa->fetch_assoc()){
             ?>
-              <div>
-                <h2><?php echo $result['title'] ?></h2>
-                <p>
+              <div style=" margin: 100px 0;">
+                <h2 style="text-align: left; letter-spacing:0.15em; margin-bottom: 30px;"><?php echo $result['title'] ?></h2>
+                <p style="    font-weight: 400;
+    letter-spacing: 0.1em;">
                 <?php echo $result['content'] ?>
                 </p>
 

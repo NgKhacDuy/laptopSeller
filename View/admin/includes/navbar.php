@@ -52,7 +52,7 @@ $admin_user=session::get('admin_User');
     </li>
     <?php 
     $check = Session::get('level');
-    if($check== '0'){ 
+    if($check== 'admin'){ 
      ?>
      <li class="nav-item">
       <a class="nav-link" href="listadmin.php">
@@ -96,6 +96,11 @@ $admin_user=session::get('admin_User');
               <a class="collapse-item" href="discount.php">Chương Trình Khuyến Mãi</a>
             </div>
           </li>
+          <li class="nav-item">
+          <a class="nav-link" href="khachhang.php">
+          <i class="fas fa-users-cog"></i>
+          <span>Khách hàng</span></a>
+        </li>
 
         <?php }   ?> 
 

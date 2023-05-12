@@ -4,7 +4,8 @@
   font-weight: 600;
   font-size: 20px;
 } */
-main {
+
+body {
     background-color: #f5f5f5;
 }
 
@@ -12,6 +13,7 @@ main {
     text-align: center;
     font-size: 30px;
     letter-spacing: 0.15em;
+    padding-top: 30px;
 }
 
 .nav_the-loai {
@@ -48,7 +50,9 @@ main {
 .nav_the-loai>.nav_the-loai-item:hover {
     top: -5px;
 }
-
+.carousel-inner{
+    padding: 40px 0 40px 0;
+  }
 /* .nav_the-loai > .search_button {
     border: none;
     color: black;
@@ -63,6 +67,10 @@ main {
 .row>a,
 div {
     text-align: center;
+}
+
+.row  .laptop_description{
+    text-align: left;
 }
 
 .container {
@@ -114,7 +122,12 @@ p {
     padding-bottom: 20px;
     text-align: start;
 }
-
+.laptop_description h3,h4, button{
+    font-weight: 500;
+  }
+  .laptop_description p{
+    font-weight: 400;
+  }
 /* @media only screen and (max-width: 980px) {
     .laptop_description {
       margin-top: 50px;
@@ -186,6 +199,14 @@ p {
 
 .thanh_toan>div {
     margin-right: 15px;
+}
+
+.font_weight400{
+    font-weight: 500 !important;
+}
+
+.nav-link{
+    color: #375278 !important;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -921,3 +942,8 @@ form:first-child {
     line-height: 40px;
     margin-left: 10px;
 }
+
+
+
+
+/*  */
