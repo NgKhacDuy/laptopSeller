@@ -25,14 +25,14 @@ $format = new Format();
                 $output .='
                 <div class="col" style="width:50%; min-height: 400px; display: flex;">
                 <div class="text-center card text-black" style="width: 100%; height: 100%;">
-                    <img style="width:60%;" src="View/admin/uploads/'.$result['HinhAnh'].'"
+                    <img style="width:60%;margin-top:46px;margin-bottom:30px" src="View/admin/uploads/'.$result['HinhAnh'].'"
                     class="text-center mx-auto d-block card-img-top" alt="Apple Computer" />
                     <div class="card-body">
                     <div class="text-center">
                         <h3 class="text-center bold text-muted mb-4">'.$result['TenSP'].'</h3>
                         <h4 class="text-center card-title">'.$format->format_currency($result['Gia']).'đ</h4>
                     </div>
-                    <a href="#" class="link-primary">Buy now</a>
+                    <a href="sanpham?id='.$result['MaSP'].'" class="link-primary">Buy now</a>
                     </div>
                 </div>
             </div>

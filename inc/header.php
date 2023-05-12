@@ -59,7 +59,7 @@
 <body>
 <header></header>
     <main>
-      <section style="background-color: #E8E8E8; padding-bottom: 20px">
+      <section style="background-color: #E8E8E8; padding-bottom: 20px" class="header">
         <button
           class="btn"
           id="menu_btn"
@@ -120,7 +120,7 @@
         <a style="text-decoration:none;color:black;" href="trangchu">
           <h2 class="title">WEBSITE</h2>
         </a>
-        <div class="nav_the-loai full_screnn">
+        <div style="padding: top 15px; align-items:center;" class="nav_the-loai full_screnn">
           <a
             id="laptop_brand"
             class="nav_the-loai-item"

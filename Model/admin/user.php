@@ -89,7 +89,7 @@
 					Session::set('customer_name',$value['TenKH']);
 					// error_log($value['username']);
 					// error_log($value['TenKH']);
-					header('location:index.php');
+					header('location:trangchu');
 				
 				}else{
 					$alert = '<span class="text-danger" > Sai tài khoản hoặc mật khẩu</span>'; 

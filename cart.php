@@ -1,3 +1,8 @@
+<style>
+  .header{
+    background-color: #f5f5f5 !important;
+  }
+</style>
 <?php
 ob_start();
     include 'inc/header.php'
@@ -26,8 +31,8 @@ ob_start();
 
  
 ?>
-    <div class="container">
-      <section class="h-100" style="background-color: #eee">
+    <div class="container" style="height: fit-content;" >
+      <section class="h-100" style="background-color: #f5f5f5">
         <div class="container h-100 py-5">
           <div
             class="row d-flex justify-content-center align-items-center h-100"
@@ -65,8 +70,9 @@ ob_start();
                         $index++;
                         array_push($totalMoney,$resultPro['Gia']);
               ?>
-              <div class="card cardIndex<?php echo $index; ?> rounded-3 mb-4">
-                <div class="card-body p-4">
+              <div class="card cardIndex<?php echo $index; ?> rounded-3 mb-4" style="border: none;margin-bottom:0 !important">
+                <div class="card-body p-4" style="background-color: #f5f5f5">
+                <div class="card-body p-4" style="background-color: #f5f5f5">
                   <div
                     class="row d-flex justify-content-between align-items-center"
                   >
@@ -119,6 +125,7 @@ ob_start();
                     
                   </div>
                 </div>
+                <div style="background-color: #f5f5f5"><hr></div>
               </div>
               <?php
                       }
@@ -130,18 +137,24 @@ ob_start();
               <?php
                 if($showCart){
               ?>
-              <p id="total" style="text-align:end;">Tổng tiền: 0đ
+              <p id="total" style="text-align:end;background-color:#f5f5f5; margin:0; padding-right:20px" >Tổng tiền: 0đ
                   
               </p>
-              <div class="card">
-                <div class="card-body">
+              <div class="card" style="border:none;background-color:#f5f5f5;">
+                <div class="card-body" 
+                style="
+                  padding-bottom: 30px;
+                  width: 300px;
+                  align-self: end;"
+                >
                   
                     
                       <input
                         onclick="thanhtoan()"
-                        class="btn btn-danger btn-block btn-lg"
+                        class="btn btn-block btn-lg"
                         value="Thanh Toán"
                         name=""
+                        style="background-color: #363A95;color: white; font-weight:500"
                       />
                     
                 </div>

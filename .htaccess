@@ -7,4 +7,4 @@ RewriteRule ^giohang$ cart.php [L]
 RewriteRule ^trangchu$ index.php [L]
 RewriteRule ^donhang$ donhang.php [L]
 RewriteRule ^user$ user.php [L]
-ErrorDocument 404 /404.php
+ErrorDocument 404 /laptopseller1/404.php
