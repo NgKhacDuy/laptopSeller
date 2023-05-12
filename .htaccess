@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^danhsachsanpham$ danhsachsanpham.php [L]
+RewriteRule ^sanpham$ sanpham.php [L]
+RewriteRule ^dangnhap$ login.php [L]
+RewriteRule ^dangky$ signup.php [L]
+RewriteRule ^giohang$ cart.php [L]
+RewriteRule ^trangchu$ index.php [L]
+RewriteRule ^donhang$ donhang.php [L]
+RewriteRule ^user$ user.php [L]
+ErrorDocument 404 /404.php

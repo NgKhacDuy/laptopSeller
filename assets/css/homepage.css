@@ -1,0 +1,279 @@
+/* .title-navbar {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+} */
+main {
+    background-color: #f5f5f5;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.15em;
+}
+
+.nav_the-loai {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px 10px 10px 10px;
+
+}
+
+.table__header {
+    background-color: #E8E8E8 !important;
+    border: 0;
+}
+
+/* .nav_the-loai > a{
+    font-size: 12px;
+  } */
+
+#menu_btn {
+    display: none;
+}
+
+.nav_the-loai>.nav_the-loai-item {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+    letter-spacing: 0.13em;
+}
+
+.nav_the-loai>.nav_the-loai-item:hover {
+    top: -5px;
+}
+
+/* .nav_the-loai > .search_button {
+    border: none;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  .nav_the-loai > .search_button :hover {
+    background-color: #d8d8d8;
+    border-color: #c8c8c8;
+  } */
+.row>a,
+div {
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.main_slide {
+    padding: 25px;
+}
+
+.small-pic {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.small-pic>div>img {
+    width: 130px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.small-pic>div {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    box-shadow: -5px 7px 10px 1px #c8c8c8;
+    border-radius: 5px;
+}
+
+/* .subimg{
+    background-color: white;
+  } */
+.active_hover {
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+}
+
+.active_hover:hover {
+    top: -5px;
+}
+
+.laptop_description>h3,
+h4,
+p {
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-align: start;
+}
+
+/* @media only screen and (max-width: 980px) {
+    .laptop_description {
+      margin-top: 50px;
+    }
+  } */
+
+.relate-product {
+    padding: 20px;
+    margin-top: 40px;
+
+}
+
+.relate-product>h3 {
+    padding-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+
+}
+
+.product-list-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: start;
+    padding: 30px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.product-list>.card {
+    margin-right: 40px;
+    margin-top: 20px;
+    padding: 5px;
+    padding-top: 20px;
+
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+    box-shadow: 0px 13px 10px 0px #c8c8c8;
+    border-radius: 5px;
+}
+
+.product-list>.card_High {
+    top: -60px;
+}
+
+.product-list>.card:hover {
+    top: -10px;
+}
+
+.product-list>.card_High:hover {
+    top: -70px;
+}
+
+.make-center {
+    position: absolute;
+    top: 120px;
+}
+
+.thanh_toan {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 80px;
+}
+
+.thanh_toan>div {
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .only-picture {
+        margin-top: 500px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .only-picture {
+        margin-top: 1100px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav_the-loai {
+        flex-direction: column;
+    }
+
+    .nav_the-loai>.nav_the-loai-item {
+        margin-top: 10px;
+        /* border: 1px solid black; */
+        box-shadow: inset 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .full_screnn {
+        display: none;
+    }
+
+    #menu_btn {
+        display: block;
+        font: 27;
+    }
+
+    .container>.row>a {
+        display: none;
+    }
+
+    .more-tittle {
+        display: none;
+    }
+
+    /* .more-tittle {
+      display: block;
+    } */
+    .main_slide {
+        display: block;
+        padding: 20px;
+    }
+
+    .laptop_description {
+        margin-top: 50px;
+    }
+
+    .small-pic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .small-pic>img {
+        margin-top: 20px;
+        width: 150px;
+        box-shadow: 0px 13px 10px 0px #c8c8c8;
+    }
+
+    .laptop_description>h3,
+    h4,
+    p {
+        text-align: center;
+    }
+
+    .product-list {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.laptop_description h3,
+h4,
+button {
+    font-weight: 500;
+}
+
+.laptop_description p {
+    font-weight: 400;
+}
+
+.carousel-inner {
+    padding: 40px 0 40px 0;
+}
