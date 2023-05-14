@@ -47,7 +47,7 @@
 				Session::set('admin_Id',$value['MaNV']);
 				Session::set('admin_User',$value['username']);
 				Session::set('Name',$value['TenNV']);
-				Session::set('level',$value['level']);
+				Session::set('level',$value['MaChucVu']);
 				header('Location:index.php');
 			}
 		}

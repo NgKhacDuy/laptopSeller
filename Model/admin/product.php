@@ -86,11 +86,18 @@
 		}
 
 
-		public function ShowAllProduct($start,$numPerPage,$search){
-			if($search == ""){
+		public function ShowAllProduct($start,$numPerPage,$search,$brand){
+			if($brand !=""||$search != ""){
+				if($brand != ""){
+					$query = "SELECT * FROM sanpham WHERE thuonghieu = '$brand' LIMIT $start,$numPerPage";
+				}
+				else{
+					$query = "SELECT * FROM sanpham WHERE TenSP LIKE '%$search%' LIMIT $start,$numPerPage";
+				}
+			}
+			
+			else {
 				$query = "SELECT * FROM sanpham LIMIT $start,$numPerPage";
-			} else {
-				$query = "SELECT * FROM sanpham WHERE TenSP LIKE '%$search%' LIMIT $start,$numPerPage";
 			}
 			$result = $this->db->select($query);
 			error_log($query);
@@ -331,6 +338,28 @@
 				}
 		}	
 
+
+		public function updateMoTaNgan($id,$data){
+			$content = mysqli_real_escape_string($this->db->link, $data['shortDescripText']);
+			$query = "update sanpham set MoTaNgan = '$content' where MaSP = '$id'";
+			$result = $this->db->update($query);
+			if($result){
+				$alert = "<span class='text-success >update thành công</span";
+				return $alert;
+
+			}
+			else{
+				$alert = "<span class='text-success >update thất bại</span";
+				return $alert;	
+			}
+		}
+
+		public function getMoTaNgan($id){
+			$query = "select MoTaNgan from sanpham where MaSP = '$id'";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
 		public function insertMoTaProd($id, $title, $content, $file) {
 			$permited = array('jpg', 'jpeg', 'png', 'gif');
 			$file_name = $file['name'];
@@ -479,6 +508,16 @@
 						GROUP BY MaSP
 						ORDER BY count DESC
 						LIMIT 3
+			";
+			$result = $this->db->select($query);
+			return $result;
+		}
+		public function getTop4Seller(){
+			$query = "SELECT MaSP,COUNT(MaSP) as count
+						FROM chitietbienlai
+						GROUP BY MaSP
+						ORDER BY count DESC
+						LIMIT 4
 			";
 			$result = $this->db->select($query);
 			return $result;

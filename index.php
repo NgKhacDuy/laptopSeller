@@ -57,7 +57,7 @@
                     ?>
                         <div class="active_hover"><img
                           class=" subimg"
-                          src="View/admin/uploads/<?php echo $resultPro['HinhAnh'] ?>"
+                          src="View/admin/uploads/<?php echo $img['Img'] ?>"
                           alt="ảnh phụ"
                         /></div>
                         <?php
@@ -137,14 +137,23 @@
           <h3>RELATE PRODUCT</h3>
           <div class="product-list-container">
             <div class="product-list">
+            <?php
+            $show = $product->getTop4Seller();
+            if($show){
+              while($result = $show->fetch_assoc()){
+                $prod = $product->getproductByid($result['MaSP']);
+                if($prod){
+                  while($resultPro = $prod->fetch_assoc()){
+                    ?>
               <div id="san_pham" class="card" style="width: 18rem">
-                <img src="./img/img_1.png" class="card-img-top" alt="..." />
+                <img src="View/admin/uploads/<?php echo $resultPro['HinhAnh'] ?>" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Macbook Air M2</h5>
+                  <h5 class="card-title"><?php echo $resultPro['TenSP'] ?></h5>
                   <p class="card-text" style="text-align: center">
-                    32.000.000 đ
+                    <?php echo $fm->format_currency($resultPro['Gia']) ?>đ
                   </p>
                   <button
+                  onclick="location.href='sanpham?id=<?php echo $resultPro['MaSP']?>'"
                     style="
                       width: 100%;
                       background-color: rgb(255, 255, 255);
@@ -160,75 +169,12 @@
                   </button>
                 </div>
               </div>
-              <div id="san_pham" class="card" style="width: 18rem">
-                <img src="./img/img_1.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Macbook Air M2</h5>
-                  <p class="card-text" style="text-align: center">
-                    32.000.000 đ
-                  </p>
-                  <button
-                    style="
-                      width: 100%;
-                      background-color: rgb(255, 255, 255);
-                      color: black;
-                      border: none;
-                      transition: top 0.2s ease;
-                    "
-                    id="buy_now"
-                    type="button"
-                    class="btn btn-info active_hover"
-                  >
-                    <strong>BUY NOW</strong>
-                  </button>
-                </div>
-              </div>
-              <div id="san_pham" class="card" style="width: 18rem">
-                <img src="./img/img_1.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Macbook Air M2</h5>
-                  <p class="card-text" style="text-align: center">
-                    32.000.000 đ
-                  </p>
-                  <button
-                    style="
-                      width: 100%;
-                      background-color: rgb(255, 255, 255);
-                      color: black;
-                      border: none;
-                      transition: top 0.2s ease;
-                    "
-                    id="buy_now"
-                    type="button"
-                    class="btn btn-info active_hover"
-                  >
-                    <strong>BUY NOW</strong>
-                  </button>
-                </div>
-              </div>
-              <div id="san_pham" class="card" style="width: 18rem">
-                <img src="./img/img_1.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Macbook Air M2</h5>
-                  <p class="card-text" style="text-align: center">
-                    32.000.000 đ
-                  </p>
-                  <button
-                    style="
-                      width: 100%;
-                      background-color: rgb(255, 255, 255);
-                      color: black;
-                      border: none;
-                      transition: top 0.2s ease;
-                    "
-                    id="buy_now"
-                    type="button"
-                    class="btn btn-info active_hover"
-                  >
-                    <strong>BUY NOW</strong>
-                  </button>
-                </div>
-              </div>
+              <?php
+                    }
+                  }
+                }
+              }
+              ?>
             </div>
           </div>
         </div>
@@ -236,14 +182,25 @@
 
       <section>
         
-        <div class="product-list-container" style="position: relative">
+        <div class="product-list-container" style="z-index:99999; position: relative">
           <div class="product-list make-center">
+          <?php
+            $show = $product->getTop4Seller();
+            if($show){
+              while($result = $show->fetch_assoc()){
+                $prod = $product->getproductByid($result['MaSP']);
+                if($prod){
+                  while($resultPro = $prod->fetch_assoc()){
+                    ?>
             <div class="card" style="width: 18rem">
-              <img src="./img/img_1.png" class="card-img-top" alt="..." />
+              <img src="View/admin/uploads/<?php echo $resultPro['HinhAnh'] ?>" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Macbook Air M2</h5>
-                <p class="card-text" style="text-align: center">32.000.000 đ</p>
+                <h5 class="card-title"><?php echo $resultPro['TenSP'] ?></h5>
+                <p class="card-text" style="text-align: center">
+                <?php echo $fm->format_currency($resultPro['Gia']) ?>đ
+              </p>
                 <button
+                onclick="location.href='sanpham?id=<?php echo $resultPro['MaSP']?>'"
                   style="
                     width: 100%;
                     background-color: rgb(255, 255, 255);
@@ -258,67 +215,13 @@
                 </button>
               </div>
             </div>
-            <div class="card card_High" style="width: 18rem">
-              <img src="./img/img_1.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Macbook Air M2</h5>
-                <p class="card-text" style="text-align: center">32.000.000 đ</p>
-                <button
-                  style="
-                    width: 100%;
-                    background-color: rgb(255, 255, 255);
-                    color: black;
-                    border: none;
-                    transition: top 0.2s ease;
-                  "
-                  type="button"
-                  class="btn btn-info active_hover"
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-            <div class="card card_High" style="width: 18rem">
-              <img src="./img/img_1.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Macbook Air M2</h5>
-                <p class="card-text" style="text-align: center">32.000.000 đ</p>
-                <button
-                  style="
-                    width: 100%;
-                    background-color: rgb(255, 255, 255);
-                    color: black;
-                    border: none;
-                    transition: top 0.2s ease;
-                    margin-top: -40px;
-                  "
-                  type="button"
-                  class="btn btn-info active_hover"
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem">
-              <img src="./img/img_1.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Macbook Air M2</h5>
-                <p class="card-text" style="text-align: center">32.000.000 đ</p>
-                <button
-                  style="
-                    width: 100%;
-                    background-color: rgb(255, 255, 255);
-                    color: black;
-                    border: none;
-                    transition: top 0.2s ease;
-                  "
-                  type="button"
-                  class="btn btn-info active_hover"
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
+            <?php
+                    }
+                  }
+                }
+              }
+              ?>
+            
           </div>
         </div>
         <div class="best_seller" style="background-color:#444;">
@@ -341,7 +244,7 @@
         </div>
       </section>
 
-      <div><img src="img/Group 67.png" style="width: 80%;"></div>
+      <!-- <div><img src="img/Group 67.png" style="width: 80%;"></div> -->
       <!-- <section style="padding-top: 200px">
         <div class="container only-picture">
           <div class="row">

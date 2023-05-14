@@ -52,6 +52,7 @@ $admin_user=session::get('admin_User');
     </li>
     <?php 
     $check = Session::get('level');
+    // echo $check;
     if($check== 'admin'){ 
      ?>
      <li class="nav-item">

@@ -159,6 +159,7 @@ include ("../../helpers/format.php");
             <th>Địa Chỉ</th>
             <th width="15%">Trạng Thái </th>
             <th>Thao Tác</th>
+            <th>In hóa đơn</th>
           </tr>
         </thead>
         <tbody>
@@ -205,9 +206,10 @@ include ("../../helpers/format.php");
                 
       
                
-                  <input  id="edit" type="button" name="submit" class="btn btn-primary" value="Cập nhật trạng thái" data-toggle="modal" data-target="#addadminprofile">
-                 
-               
+                  <input  id="edit" type="button" name="submit" class="btn btn-primary" value="Cập nhật trạng thái" data-toggle="modal" data-target="#addadminprofile">               
+            </td>
+            <td>
+              <input type="button" class="btn btn-primary" onclick="location.href='hoadon.php?id=<?php echo $result['MaBL']?>'" value="In hóa đơn" />
             </td>
           </tr>
          <?php

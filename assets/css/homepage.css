@@ -16,7 +16,7 @@ main {
 
 .nav_the-loai {
     display: flex;
-    align-items: center !important;
+    align-items: center;
     justify-content: space-evenly;
     margin: 35px 10px 10px 10px;
 
@@ -38,7 +38,7 @@ main {
 .nav_the-loai>.nav_the-loai-item {
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 500;
     position: relative;
     top: 0;
@@ -47,7 +47,8 @@ main {
 }
 
 .nav_the-loai>.nav_the-loai-item:hover {
-    top: -5px;
+    /* top: -5px; */
+    text-decoration: underline;
 }
 
 /* .nav_the-loai > .search_button {
@@ -155,8 +156,8 @@ p {
     padding: 5px;
     padding-top: 20px;
 
-    position: relative;
-    top: 0;
+    /* position: relative;
+    top: 0; */
     transition: top 0.2s ease;
     box-shadow: 0px 13px 10px 0px #c8c8c8;
     border-radius: 5px;
@@ -174,10 +175,10 @@ p {
     top: -70px;
 }
 
-.make-center {
+/* .make-center {
     position: absolute;
     top: 120px;
-}
+} */
 
 .thanh_toan {
     display: flex;
@@ -262,6 +263,18 @@ p {
     .product-list {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .footer {
+        margin-top: 1000px;
+    }
+
+    .product-list>.card_High {
+        top: 0;
+    }
+
+    .product-list>.card_High:hover {
+        top: -10px;
     }
 }
 

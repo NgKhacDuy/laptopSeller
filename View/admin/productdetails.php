@@ -67,6 +67,12 @@ h3{
     $updateProd = $prod->update_product($_POST,$_FILES,$name);
     // error_log($name);
     }
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['shortDescrip'])){
+
+      $updateShort = $prod->updateMoTaNgan($name,$_POST);
+      // error_log($name);
+      }
     
     // add product detail
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addThongSoKyThuatProdDetail'])){
@@ -284,8 +290,46 @@ h3{
 </div>
 
 <!-- End addsize -->
+<!-- chinh sua mo ta ngan -->
+<form action="" method="POST" enctype="multipart/form-data">
+<div class="modal fade" id="addmotangan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa mô tả ngắn</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="POST" enctype="multipart/form-data">
 
+        <div class="modal-body">
+          <div class="form-group green-border-focus">
+            <label for="exampleFormControlTextarea5">Chỉnh sửa mô tả ngắn</label>
+            <?php
+              $shortDescrib = $prod->getMoTaNgan($name);
+              if($shortDescrib){
+                    while ($resultShort = $shortDescrib->fetch_assoc()) {
+            ?>
+            <textarea value ="" name="shortDescripText" class="form-control" id="exampleFormControlTextarea5" rows="3"><?php echo $resultShort['MoTaNgan'] ?></textarea>
+          <?php
+                    }
+                  }
+          ?>
+          </div>
+            
 
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="submit" name="shortDescrip" class="btn btn-primary">Lưu</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<!-- end mo ta ngan -->
 <!-- chinh sua mo ta -->
 <form action="" method="POST" enctype="multipart/form-data">
 <div class="modal fade" id="addthongsokythuat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -375,6 +419,9 @@ h3{
             </button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addthongsokythuat">
               Chỉnh sửa thông số kỹ thuật
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmotangan">
+              Chỉnh sửa mô tả ngắn
         </button>
       </h3>
     </div>

@@ -142,8 +142,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['registerbtn'])){
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Danh Sách khách hàng
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
-             Thêm khách hàng
+            
     </h6>
   </div>
 
@@ -162,7 +161,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['registerbtn'])){
             <th> Địa chỉ </th>
             <th> Tổng tiền đã mua  </th>
             <th> Lịch sử đơn hàng </th>
-            <th> Thao tác </th>
           </tr>
         </thead>
         <tbody>
@@ -185,12 +183,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['registerbtn'])){
                 <a href="lichsudonhang.php?name=<?php echo $result['MaKH']?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Lịch sử đơn hàng </a>
                </form>
             </td>
-            <td>
-                <form action="" method="post">
-                  <input type="hidden" name="delete_id" value="<?php echo $result['MaKH']?>">
-                  <button  type="submit" name="delete_btn" class="btn btn-danger">Xóa</button>
-                </form>
-            </td>
+            
           </tr>
         <?php
           }

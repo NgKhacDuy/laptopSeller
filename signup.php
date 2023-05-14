@@ -87,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])){
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Số điện thoại</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="number" name="phone">
                                 </div>
                             </div>
                         </div>

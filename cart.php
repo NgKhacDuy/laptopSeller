@@ -72,7 +72,6 @@ ob_start();
               ?>
               <div class="card cardIndex<?php echo $index; ?> rounded-3 mb-4" style="border: none;margin-bottom:0 !important">
                 <div class="card-body p-4" style="background-color: #f5f5f5">
-                <div class="card-body p-4" style="background-color: #f5f5f5">
                   <div
                     class="row d-flex justify-content-between align-items-center"
                   >
@@ -125,7 +124,6 @@ ob_start();
                     
                   </div>
                 </div>
-                <div style="background-color: #f5f5f5"><hr></div>
               </div>
               <?php
                       }

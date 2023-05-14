@@ -65,12 +65,15 @@
 			return $result;
 		}
 		
-		public function getCartById($id){
-			$query = "SELECT bd.TenSP, bd.SoLuong, bd.DonGia, bd.ThanhTien,b.ngaytao,b.status
-			FROM bienlai b
-			JOIN chitietbienlai bd ON b.MaBL = bd.MaBienLai
-			WHERE b.MaKH = '$id'
-			ORDER BY b.ngaytao DESC
+		public function getDonHangById($id){
+			$query = "SELECT * FROM bienlai WHERE bienlai.MaKH = '$id' order by MaBL DESC
+			";
+			$result = $this->db->select($query);
+			return $result;
+		}
+
+		public function getChiTietDonHang($id){
+			$query = "SELECT * FROM chitietbienlai WHERE chitietbienlai.MaBienLai = '$id'
 			";
 			$result = $this->db->select($query);
 			return $result;
@@ -177,5 +180,12 @@
 				return $result;
 			}
 		} 
+		public function getQuantityCart($idCus){
+			$query = "SELECT COUNT(MaSP) as count from giohang WHERE MaKH = $idCus";
+			$result = $this->db->select($query);
+			if($result){
+				return $result;
+			}
+		}
 	}
  ?>

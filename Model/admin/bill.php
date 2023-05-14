@@ -75,9 +75,9 @@
 		}
 		public function get_Bill_by_Id($id){
 
-			// $query = "SELECT a.order_Id, a.date , a.buyer, a.receiver, a.phone,a.email,a.totalprice,a.address, b.name as 'city', c.name as 'dis' FROM tbl_order a, tbl_city b, tbl_district c WHERE a.city=b.matp AND a.district=c.maqh AND order_Id = '$id'";
-			// $result = $this->db->select($query);
-			// return $result;
+			$query = "SELECT * FROM bienlai where MaBL = '$id'";
+			$result = $this->db->select($query);
+			return $result;
 		}
 		public function insert_OrderDetail($MaxId){
 			$session_id = session_id();
